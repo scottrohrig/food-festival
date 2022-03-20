@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="assets/css/bootstrap.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <script src="./dist/main.bundle.js" defer ></script>
+  <script src="./dist/app.bundle.js" defer ></script>
 
 </head>
 <body>
@@ -157,7 +157,7 @@
                 <i class="fa fa-instagram fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
               </a>
               <!--Pinterest-->
-              <a>
+              <a>i
                 <i class="fa fa-pinterest fa-lg text-white fa-2x"> </i>
               </a>
             </div>
@@ -166,5 +166,15 @@
       </div>        
       <div class="footer-copyright text-center py-3 text-white">© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.</div>        
     </footer>
+
+    <script>
+      (function() {
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('./service-worker.js')
+          .then(()=> console.log('Service Worker Registered Successfully.'))
+          .catch(error => console.log("Service Worker registration failed:", error))
+        }
+      })()
+    </script>
 </body>
 </html>
